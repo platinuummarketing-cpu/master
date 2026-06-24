@@ -356,14 +356,38 @@
 </head>
 <body>
 
-  <header>
+  
+<style>
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--preto);border-radius:2px}
+#mobile-menu{display:none;position:absolute;top:60px;left:0;right:0;background:#fff;border-bottom:1px solid var(--cb);padding:16px 24px;flex-direction:column;gap:16px;z-index:200}
+#mobile-menu a{font-size:15px;color:var(--preto);text-decoration:none;font-weight:500}
+@media(max-width:560px){
+  .hamburger{display:flex}
+  nav{display:none}
+  header{position:relative}
+}
+</style><header>
     <a href="/" class="logo">Simul<span>Auto</span></a>
     <nav>
       <a href="#">Carros</a>
       <a href="#">Motos</a>
       <a href="#">Comparar Bancos</a>
     </nav>
-  </header>
+  <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</header>
+<div id="mobile-menu">
+<a href="/carros">🚗 Carros</a>
+<a href="/motos">🏍️ Motos</a>
+<a href="/comparar-bancos">🏦 Comparar Bancos</a>
+</div>
+
+<script>
+function toggleMenu(){
+  const m=document.getElementById('mobile-menu');
+  m.style.display=m.style.display==='flex'?'none':'flex';
+}
+</script>
 
   <section class="hero">
     <p class="hero-eyebrow">Simulador Gratuito</p>
