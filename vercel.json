@@ -1,4 +1,9 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/carros", "destination": "/carros/index.html" },
+    { "source": "/motos", "destination": "/motos/index.html" },
+    { "source": "/comparar-bancos", "destination": "/comparar-bancos/index.html" }
+  ]
 }
