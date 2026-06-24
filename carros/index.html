@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Simulador Financiamento por Modelo 2025 | SimulAuto</title><meta name="description" content="Simule o financiamento de qualquer carro. 50 modelos disponíveis. Fiat, VW, Hyundai, Chevrolet e mais."/><link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet"/><style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--preto:#0f0f0f;--branco:#fff;--cf:#f5f5f3;--cb:#e2e2e0;--ct:#6b6b6b;--verde:#1a7a4a}body{font-family:'Inter',sans-serif;background:var(--cf);color:var(--preto)}header{background:#fff;border-bottom:1px solid var(--cb);padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;
+
+python3 -c "
+exec(open('gerar.py').read())
+
+# Pagina /carros
+carros_html = open('gerar.py').read()
+" 2>/dev/null
+
+cat > carros/index.html << 'EOF'
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Simulador Financiamento por Modelo 2025 | SimulAuto</title><meta name="description" content="Simule o financiamento de qualquer carro. 50 modelos disponíveis. Fiat, VW, Hyundai, Chevrolet e mais."/><link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet"/><style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--preto:#0f0f0f;--branco:#fff;--cf:#f5f5f3;--cb:#e2e2e0;--ct:#6b6b6b;--verde:#1a7a4a}body{font-family:'Inter',sans-serif;background:var(--cf);color:var(--preto)}header{background:#fff;border-bottom:1px solid var(--cb);padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}.logo{font-family:'DM Serif Display',serif;font-size:22px;color:var(--preto);text-decoration:none}.logo span{color:var(--verde)}nav{display:flex;gap:24px}nav a{font-size:14px;color:var(--ct);text-decoration:none;font-weight:500}@media(max-width:560px){nav{display:none}}.ad{background:#fff;border-bottom:1px solid var(--cb);display:flex;align-items:center;justify-content:center;padding:12px 16px;min-height:110px}.ad-box{background:#f0f0ee;border:2px dashed #ccc;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#999;font-size:12px;font-weight:600;text-transform:uppercase;gap:4px;width:100%;max-width:728px;height:90px}.ad-label{font-size:10px;color:#bbb}.hero{background:var(--preto);color:#fff;padding:48px 24px 72px;text-align:center}.ey{font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--verde);margin-bottom:12px}.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(26px,4vw,44px);line-height:1.1;margin-bottom:12px;max-width:600px;margin-left:auto;margin-right:auto}.hero p{font-size:15px;color:#aaa;max-width:440px;margin:0 auto;line-height:1.6}.wrap{max-width:900px;margin:-40px auto 0;padding:0 16px 64px}.card{background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,.08);overflow:hidden;margin-bottom:20px}.ch{padding:20px 28px;border-bottom:1px solid var(--cb);display:flex;align-items:center;justify-content:space-between}.ch h2{font-size:15px;font-weight:600}.bw{padding:20px 28px;border-bottom:1px solid var(--cb)}.bi{width:100%;padding:13px 16px;border:1.5px solid var(--cb);border-radius:10px;font-size:15px;font-family:'Inter',sans-serif}.bi:focus{outline:none;border-color:var(--verde)}.sec{padding:24px 28px;border-bottom:1px solid var(--cb)}.sec:last-child{border-bottom:none}.st{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--ct);margin-bottom:14px}.mg{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px}.mc{background:var(--cf);border:1.5px solid var(--cb);border-radius:10px;padding:14px 16px;text-decoration:none;color:var(--preto);display:flex;align-items:center;justify-content:space-between;transition:all .2s}.mc:hover{border-color:var(--verde);background:#f0faf5}.mn{font-size:14px;font-weight:600;margin-bottom:2px}.mp{font-size:12px;color:var(--ct)}.ma{color:#ccc;font-size:18px}.mc:hover .ma{color:var(--verde)}.adr{max-width:900px;margin:0 auto 48px;padding:0 16px;display:flex;justify-content:center}footer{background:var(--preto);color:#666;text-align:center;padding:28px 24px;font-size:13px}footer strong{color:#fff}</style></head><body>
+<header><a href="/" class="logo">Simul<span>Auto</span></a><nav><a href="/carros" style="color:var(--verde);font-weight:600">Carros</a><a href="/motos">Motos</a><a href="/comparar-bancos">Comparar Bancos</a></nav></header>
+<div class="ad"><div class="ad-box">📢 AdSense 728×90<span class="ad-label">Leaderboard</span></div></div>
+<section class="hero"><p class="ey">50 modelos disponíveis</p><h1>Simule o financiamento do seu carro</h1><p>Escolha o modelo e calcule parcelas com dados reais de 2025.</p></section>
+<div class="wrap"><div class="card">
+<div class="ch"><h2>Escolha o modelo</h2><span id="cnt">50 modelos</span></div>
+<div class="bw"><input type="text" class="bi" id="busca" placeholder="🔍 Buscar modelo... ex: HB20, Polo, Strada" oninput="filtrar()"/></div>
+<div class="sec" id="s1"><p class="st">🏆 Mais vendidos 2025</p><div class="mg">
+<a href="/financiamento/fiat-strada" class="mc" data-n="fiat strada"><div><p class="mn">Fiat Strada</p><p class="mp">R$ 125.000</p></div><span class="ma">›</span></a>
+<a href="/financiamento/volkswagen-polo" class="mc" data-n="volkswagen polo vw"><div><p class="mn">Volkswagen Polo</p><p class="mp">R$ 92.000</p></div><span class="ma">›</span></a>
+<a href="/financiamento/fiat-argo" class="mc" data-n="fiat argo"><div><p class="mn">Fiat Argo</p><p class="mp">R$ 88.000</p></div><span class="ma">›</span></a>
+<a href="/financiamento/volkswagen-t-cross" class="mc" data-n="volkswagen t-cross tcross"><div><p class="mn">VW T-Cross</p><p class="mp">R$ 115.000</p></div><span class="ma">›</span></a>
+<a href="/financiamento/hyundai-hb20" class="mc" data-n="hyundai hb20"><div><p class="mn">Hyundai HB20</p><p class="mp">R$ 88.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/chevrolet-onix" class="mc" data-n="chevrolet onix gm"><div><p class="mn">Chevrolet Onix</p><p class="mp">R$ 101.790</p></div><span class="ma">›</span></a>
+<a href="/financiamento/hyundai-creta" class="mc" data-n="hyundai creta"><div><p class="mn">Hyundai Creta</p><p class="mp">R$ 129.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/fiat-mobi" class="mc" data-n="fiat mobi"><div><p class="mn">Fiat Mobi</p><p class="mp">R$ 82.560</p></div><span class="ma">›</span></a>
+<a href="/financiamento/jeep-compass" class="mc" data-n="jeep compass"><div><p class="mn">Jeep Compass</p><p class="mp">R$ 174.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/renault-kwid" class="mc" data-n="renault kwid"><div><p class="mn">Renault Kwid</p><p class="mp">R$ 79.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/fiat-pulse" class="mc" data-n="fiat pulse"><div><p class="mn">Fiat Pulse</p><p class="mp">R$ 109.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/volkswagen-nivus" class="mc" data-n="volkswagen nivus vw"><div><p class="mn">VW Nivus</p><p class="mp">R$ 122.990</p></div><span class="ma">›</span></a>
+</div></div>
+<div class="sec" id="s2"><p class="st">🚙 SUVs</p><div class="mg">
+<a href="/financiamento/honda-hrv" class="mc" data-n="honda hrv hr-v"><div><p class="mn">Honda HR-V</p><p class="mp">R$ 149.900</p></div><span class="ma">›</span></a>
+<a href="/financiamento/chevrolet-tracker" class="mc" data-n="chevrolet tracker gm"><div><p class="mn">Chevrolet Tracker</p><p class="mp">R$ 132.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/toyota-corolla-cross" class="mc" data-n="toyota corolla cross"><div><p class="mn">Corolla Cross</p><p class="mp">R$ 179.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/jeep-renegade" class="mc" data-n="jeep renegade"><div><p class="mn">Jeep Renegade</p><p class="mp">R$ 134.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/nissan-kicks" class="mc" data-n="nissan kicks"><div><p class="mn">Nissan Kicks</p><p class="mp">R$ 134.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/renault-duster" class="mc" data-n="renault duster"><div><p class="mn">Renault Duster</p><p class="mp">R$ 139.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/caoa-chery-tiggo7" class="mc" data-n="caoa chery tiggo 7"><div><p class="mn">Chery Tiggo 7</p><p class="mp">R$ 149.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/haval-h6" class="mc" data-n="gwm haval h6"><div><p class="mn">GWM Haval H6</p><p class="mp">R$ 199.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/hyundai-tucson" class="mc" data-n="hyundai tucson"><div><p class="mn">Hyundai Tucson</p><p class="mp">R$ 224.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/kia-sportage" class="mc" data-n="kia sportage"><div><p class="mn">Kia Sportage</p><p class="mp">R$ 219.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/fiat-fastback" class="mc" data-n="fiat fastback"><div><p class="mn">Fiat Fastback</p><p class="mp">R$ 139.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/honda-wrv" class="mc" data-n="honda wrv wr-v"><div><p class="mn">Honda WR-V</p><p class="mp">R$ 139.990</p></div><span class="ma">›</span></a>
+</div></div>
+<div class="sec" id="s3"><p class="st">🛻 Picapes</p><div class="mg">
+<a href="/financiamento/volkswagen-saveiro" class="mc" data-n="volkswagen saveiro vw"><div><p class="mn">VW Saveiro</p><p class="mp">R$ 95.000</p></div><span class="ma">›</span></a>
+<a href="/financiamento/fiat-toro" class="mc" data-n="fiat toro"><div><p class="mn">Fiat Toro</p><p class="mp">R$ 165.000</p></div><span class="ma">›</span></a>
+<a href="/financiamento/toyota-hilux" class="mc" data-n="toyota hilux"><div><p class="mn">Toyota Hilux</p><p class="mp">R$ 279.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/ford-ranger" class="mc" data-n="ford ranger"><div><p class="mn">Ford Ranger</p><p class="mp">R$ 259.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/chevrolet-s10" class="mc" data-n="chevrolet s10 gm"><div><p class="mn">Chevrolet S10</p><p class="mp">R$ 219.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/chevrolet-montana" class="mc" data-n="chevrolet montana gm"><div><p class="mn">Chevrolet Montana</p><p class="mp">R$ 129.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/ram-rampage" class="mc" data-n="ram rampage"><div><p class="mn">RAM Rampage</p><p class="mp">R$ 219.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/volkswagen-amarok" class="mc" data-n="volkswagen amarok vw"><div><p class="mn">VW Amarok</p><p class="mp">R$ 329.990</p></div><span class="ma">›</span></a>
+</div></div>
+<div class="sec" id="s4"><p class="st">🚗 Sedãs e Hatches</p><div class="mg">
+<a href="/financiamento/chevrolet-onix-plus" class="mc" data-n="chevrolet onix plus gm"><div><p class="mn">Onix Plus</p><p class="mp">R$ 112.490</p></div><span class="ma">›</span></a>
+<a href="/financiamento/volkswagen-virtus" class="mc" data-n="volkswagen virtus vw"><div><p class="mn">VW Virtus</p><p class="mp">R$ 108.000</p></div><span class="ma">›</span></a>
+<a href="/financiamento/hyundai-hb20s" class="mc" data-n="hyundai hb20s"><div><p class="mn">Hyundai HB20S</p><p class="mp">R$ 98.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/toyota-corolla" class="mc" data-n="toyota corolla"><div><p class="mn">Toyota Corolla</p><p class="mp">R$ 179.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/honda-civic" class="mc" data-n="honda civic"><div><p class="mn">Honda Civic</p><p class="mp">R$ 179.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/fiat-cronos" class="mc" data-n="fiat cronos"><div><p class="mn">Fiat Cronos</p><p class="mp">R$ 109.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/toyota-yaris" class="mc" data-n="toyota yaris"><div><p class="mn">Toyota Yaris</p><p class="mp">R$ 109.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/peugeot-208" class="mc" data-n="peugeot 208"><div><p class="mn">Peugeot 208</p><p class="mp">R$ 109.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/byd-dolphin-mini" class="mc" data-n="byd dolphin mini eletrico"><div><p class="mn">BYD Dolphin Mini ⚡</p><p class="mp">R$ 120.000</p></div><span class="ma">›</span></a>
+<a href="/financiamento/fiat-doblo" class="mc" data-n="fiat doblo"><div><p class="mn">Fiat Doblò</p><p class="mp">R$ 145.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/chevrolet-spin" class="mc" data-n="chevrolet spin gm"><div><p class="mn">Chevrolet Spin</p><p class="mp">R$ 125.990</p></div><span class="ma">›</span></a>
+<a href="/financiamento/volkswagen-tera" class="mc" data-n="volkswagen tera vw"><div><p class="mn">VW Tera</p><p class="mp">R$ 98.000</p></div><span class="ma">›</span></a>
+</div></div>
+</div></div>
+<div class="adr"><div class="ad-box">📢 AdSense 728×90<span class="ad-label">Leaderboard Rodapé</span></div></div>
+<footer><strong>SimulAuto</strong> — Simulador de Financiamento de Veículos<br/>Preços são estimativas baseadas em dados de mercado 2025.</footer>
+<script>function filtrar(){const b=document.getElementById('busca').value.toLowerCase();let v=0;document.querySelectorAll('.mc').forEach(c=>{const m=!b||c.getAttribute('data-n').toLowerCase().includes(b);c.style.display=m?'flex':'none';if(m)v++;});document.getElementById('cnt').textContent=v+' modelos';document.querySelectorAll('.sec').forEach(s=>{s.style.display=Array.from(s.querySelectorAll('.mc')).some(c=>c.style.display!=='none')?'block':'none';});}</script>
+</body></html>
